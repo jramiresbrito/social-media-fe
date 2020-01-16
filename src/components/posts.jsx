@@ -10,20 +10,20 @@ class Posts extends Component {
     <table className='table table-hover table-striped'>
       <thead>
         <tr>
-          <th>Link</th>
           <th>Author</th>
           <th>Date</th>
           <th>Network</th>
           <th>Lists</th>
+          <th>Link</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><a href="#">Link</a></td>
-          <td>Author Name</td>
+          <td><a href="#">Author Name</a></td>
           <td>Post Date</td>
           <td>Post Network</td>
           <td>People Lists</td>
+          <td><a href="#">Link</a></td>
         </tr>
       </tbody>
     </table>
