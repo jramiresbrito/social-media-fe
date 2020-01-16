@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 
 class Posts extends Component {
-  state = {  }
+  state = {
+    posts: [],
+    networks: [],
+   }
   render() {
     return (
     <table className='table table-hover table-striped'>
