@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Moment from 'moment';
 import { getPosts } from '../services/postService';
 import { getNetworks } from '../services/networkService';
 
@@ -13,6 +14,7 @@ class Posts extends Component {
     const networks = [{ _id: '', name: 'All Networks'}, ...data];
 
     const {data: posts} = await getPosts();
+    console.log(posts);
     this.setState({posts, networks});
   }
 
@@ -29,13 +31,13 @@ class Posts extends Component {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><a href="#">Author Name</a></td>
-            <td>Post Date</td>
-            <td>Post Network</td>
-            <td>People Lists</td>
-            <td><a href="#">Link</a></td>
-          </tr>
+        {this.state.posts.map(post => <tr key={post._id}>
+            <td>{post.author.name}</td>
+            <td>{Moment(post.post_date).format('DD-MM-YYYY')}</td>
+            <td>{post.network.name}</td>
+            <td>{post.people_lists.map(list => `${list._id} ` )}</td>
+            <td>{post.post_link}</td>
+          </tr>)}
         </tbody>
       </table>
     );
