@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { toast } from 'react-toastify';
-import Moment from 'moment';
 import _ from 'lodash';
 import PostsTable from './postsTable';
 import ListGroup from './common/listGroup';
