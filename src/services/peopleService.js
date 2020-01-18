@@ -6,6 +6,10 @@ function peopleUrl(id) {
   return `${apiEndpoint}/${id}`;
 }
 
+export function getPerson(id) {
+  return http.get(peopleUrl(id));
+}
+
 export function getPeople() {
   return http.get(apiEndpoint);
 }

@@ -83,7 +83,7 @@ class PostForm extends Form {
 
   render() {
     return (
-      <div className='col-5'>
+      <div className='col-6'>
         <h1>Post Form</h1>
         <form onSubmit={this.handleSubmit}>
           {this.renderSelect('authorId', 'Author', this.state.authors)}

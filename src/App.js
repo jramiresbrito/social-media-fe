@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Posts from './components/posts';
+import PostForm from './components/postForm';
+import PeopleForm from './components/peopleForm';
 import NotFound from './components/notFound';
 import 'react-toastify/dist/ReactToastify.css';
-import PostForm from './components/postForm';
+
 
 class App extends Component {
-  state = {  }
+  state = {}
   render() {
     return (
       <>
@@ -15,7 +17,15 @@ class App extends Component {
         <main className="container col-md-10">
           <Switch>
             <Route
-              path='/post/:id' component={PostForm}
+              path='/people/:id'
+              render={props => <PeopleForm {...props}/>}
+            />
+            <Route
+              path='/people' component={PeopleForm}
+            />
+            <Route
+              path='/post/:id'
+              render={props => <PostForm {...props}/>}
             />
             <Route
               path='/post'

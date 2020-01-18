@@ -1,48 +1,13 @@
 body {
   margin: 0;
   padding: 20px;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-nav {
-  background-color: #55aa55;
-}
-
-.navbar-brand {
-  font-weight: 700;
-}
-
-.navbar {
-  margin-bottom: 30px;
-}
-
-thead {
+form > button.btn.btn-primary {
   background-color: #004400;
-  color: white;
-}
-
-td {
-  font-weight: 400;
-}
-
-td > a {
-  color: #004400;
+  border-color: #004400;
   font-weight: 700;
-}
-
-td > a:hover {
-  color: white;
 }
 
 div > ul.list-group > li {
@@ -66,17 +31,22 @@ div > ul.list-group > li:hover {
   font-weight: 700;
 }
 
-input::placeholder {
-  color: #004400 !important;
+thead {
+  background-color: #004400;
+  color: white;
 }
 
-input {
-  color: #004400 !important;
-  font-weight: 700 !important;
+td {
+  font-weight: 400;
 }
 
-input:focus {
-  border-color: #004400 !important;
+td > a {
+  color: #004400;
+  font-weight: 700;
+}
+
+td > a:hover {
+  color: white;
 }
 
 .table-striped > tbody > tr:nth-child(even) > td,
@@ -90,16 +60,11 @@ input:focus {
   color: white;
 }
 
-.table-hover tbody tr:hover button {
-  background-color: white;
-  color: #004400;
-}
-
-.btn-primary {
+a.btn.btn-primary {
   color: white;
-  background-color: #004400;
-  border: #004400;
-  font-weight: 700;
+  background-color: #004400 !important;
+  border-color: #004400 !important;
+  font-weight: 700 !important;
 }
 
 .btn-primary:hover,
@@ -113,4 +78,44 @@ input:focus {
 
 i {
   cursor: pointer;
+}
+
+strong {
+  color: #004400;
+}
+
+label {
+  color: #004400 !important;
+  font-weight: 700 !important;
+}
+
+input::placeholder {
+  color: #004400 !important;
+}
+
+input {
+  color: #004400 !important;
+  font-weight: 700 !important;
+}
+
+input:focus {
+  border-color: #004400 !important;
+}
+
+select {
+  color: #004400 !important;
+  font-weight: 700 !important;
+}
+
+select:focus {
+  border-color: #004400 !important;
+}
+
+main.container > div > h1 {
+  text-align: center !important;
+  color: #004400;
+}
+
+main.container > div {
+  margin: 0 auto;
 }

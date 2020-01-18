@@ -8,7 +8,7 @@ class PostsTable extends Component {
     {
       path: 'author',
       label: 'Author',
-    content: post => <Link to={`/people/${post.author._id}`}>{post.author.name}</Link>
+      content: post => <Link to={`/people/${post.author._id}`}>{post.author.name}</Link>
     },
     {
       path: 'post_date',

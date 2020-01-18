@@ -1,5 +1,6 @@
 {
   "name": "social-media-fe",
+  "author": "João Victor Ramires Guimarães Brito",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
