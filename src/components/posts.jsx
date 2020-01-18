@@ -25,7 +25,6 @@ class Posts extends Component {
     const networks = [{ _id: '', name: 'All Networks'}, ...data];
 
     const {data: posts} = await getPosts();
-    console.log(posts);
     this.setState({posts, networks});
   };
 
@@ -58,7 +57,7 @@ class Posts extends Component {
     let filtered = allPosts;
     if (searchQuery)
       filtered = allPosts.filter(p =>
-        p.author.toLowerCase().startsWith(searchQuery.toLowerCase())
+        p.author.name.toLowerCase().startsWith(searchQuery.toLowerCase()),
       );
     else if (selectedNetwork && selectedNetwork._id)
         filtered = allPosts.filter(p => p.network._id === selectedNetwork._id);
@@ -87,7 +86,7 @@ class Posts extends Component {
         </div>
         <div className="col">
           <Link
-            to='/users'
+            to='/post/new'
             className='btn btn-primary'
             style={{marginBottom: 20}}
           >

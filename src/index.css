@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   border: 0;
   font-size: 100%;
   font: inherit;
@@ -33,7 +33,50 @@ thead {
 }
 
 td {
+  font-weight: 400;
+}
+
+td > a {
+  color: #004400;
   font-weight: 700;
+}
+
+td > a:hover {
+  color: white;
+}
+
+div > ul.list-group > li {
+  background-color: white !important;
+  color: #004400 !important;
+  border-color: #ccc;
+  font-weight: 700;
+}
+
+div > ul.list-group > li.active {
+  background-color: #004400 !important;
+  color: white !important;
+  border: none;
+  font-weight: 700;
+}
+
+div > ul.list-group > li:hover {
+  color: #004400 !important;
+  background-color: #ccc !important;
+  border-color: #ccc !important;
+  font-weight: 700;
+}
+
+input::placeholder {
+  color: #004400 !important;
+}
+
+input {
+  color: #004400 !important;
+  font-weight: 700 !important;
+}
+
+input:focus {
+  border-color: #004400 !important;
 }
 
 .table-striped > tbody > tr:nth-child(even) > td,
@@ -52,18 +95,18 @@ td {
   color: #004400;
 }
 
-.btn-danger {
+.btn-primary {
   color: white;
   background-color: #004400;
   border: #004400;
   font-weight: 700;
 }
 
-.btn-danger:hover,
-.btn-danger:active,
-.btn-danger:focus {
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
   color: #004400 !important;
-  background-color: white !important;
+  background-color: #55aa55 !important;
   border: white !important;
   box-shadow: none !important;
 }

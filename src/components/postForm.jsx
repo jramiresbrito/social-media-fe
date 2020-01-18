@@ -3,22 +3,24 @@ import Joi from 'joi-browser';
 import Form from './common/form';
 import { getPosts, savePost } from '../services/postService';
 import { getNetworks } from '../services/networkService';
+import { getPeople } from '../services/peopleService';
 
 class PostForm extends Form {
   state = {
     data: {
-      Author: '',
+      authorId: '',
       networkId: '',
-      date: '',
-      link: '',
+      post_date: '',
+      post_link: '',
     },
+    authors: [],
     networks: [],
     errors: {},
   };
 
   schema = {
     _id: Joi.string(),
-    author: Joi.string()
+    authorId: Joi.string()
       .required()
       .label('Author'),
     networkId: Joi.string()
@@ -33,6 +35,11 @@ class PostForm extends Form {
       .max(300)
       .label('Post Link'),
   };
+
+  async populateAuthors() {
+    const { data: authors } = await getPeople();
+    this.setState({ authors });
+  }
 
   async populateNetworks() {
     const { data: networks } = await getNetworks();
@@ -53,6 +60,7 @@ class PostForm extends Form {
   }
 
   async componentDidMount() {
+    await this.populateAuthors();
     await this.populateNetworks();
     await this.populatePost();
   }
@@ -60,7 +68,7 @@ class PostForm extends Form {
   mapToViewModel(post) {
     return {
       _id: post._id,
-      author: post.author.name,
+      authorId: post.author._id,
       networkId: post.network._id,
       post_date: post.post_date,
       post_link: post.post_link,
@@ -78,7 +86,7 @@ class PostForm extends Form {
       <div className='col-5'>
         <h1>Post Form</h1>
         <form onSubmit={this.handleSubmit}>
-          {this.renderInput('author', 'Author')}
+          {this.renderSelect('authorId', 'Author', this.state.authors)}
           {this.renderSelect('networkId', 'Network', this.state.networks)}
           {this.renderInput('post_date', 'Post Date', 'date')}
           {this.renderInput('post_link', 'Post Link')}
