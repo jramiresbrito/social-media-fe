@@ -119,3 +119,29 @@ main.container > div > h1 {
 main.container > div {
   margin: 0 auto;
 }
+
+nav > ul.pagination {
+  justify-content: center;
+  cursor: pointer;
+}
+
+nav > ul.pagination > li > span {
+  background-color: white;
+  color: #004400;
+  border-color: #ccc;
+  font-weight: 700;
+}
+
+nav > ul.pagination > li.active > span {
+  background-color: #004400 !important;
+  color: white !important;
+  border-color: #004400 !important;
+  font-weight: 700;
+}
+
+nav > ul.pagination > li > span:hover {
+  color: #004400 !important;
+  background-color: #ccc !important;
+  border-color: #ccc !important;
+  font-weight: 700;
+}

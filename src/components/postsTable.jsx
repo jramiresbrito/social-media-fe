@@ -6,7 +6,7 @@ import Table from './common/table';
 class PostsTable extends Component {
   columns = [
     {
-      path: 'author',
+      path: 'author.name',
       label: 'Author',
       content: post => <Link to={`/people/${post.author._id}`}>{post.author.name}</Link>
     },

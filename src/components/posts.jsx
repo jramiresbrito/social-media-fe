@@ -17,7 +17,7 @@ class Posts extends Component {
     pageSize: 4,
     searchQuery: '',
     selectedNetwork: null,
-    sortColumn: {path: 'author', order: 'asc'},
+    sortColumn: {path: 'author.name', order: 'asc'},
   }
 
   async componentDidMount() {
