@@ -23,3 +23,9 @@ Having the back-end properly setted, follow this steps:
   <li>Run the script to start the production application: Type <strong>serve -s build</strong></li>
   <li>Done. You can now use the application hosted on the url provided by server. Normally <strong>http://localhost:5000</strong></li>
 </ol>
+
+# A DEPLOYED VERSION
+
+I have deployed this fullstack application and you can access it via this link:
+</br>
+https://gp-social-app.herokuapp.com/
