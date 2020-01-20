@@ -19,6 +19,7 @@ Having the back-end properly setted, follow this steps:
   <li>Open it using your text editor, create the .env file in root folder and set the environment variables as explained in .env.example</li>
   <li>Back to your terminal run the command to install all dependencies needed for this project: Type <strong>yarn</strong></li>
   <li>Run the script to create the production build: Type <strong>yarn build</strong></li>
-  <li>Run the script to start the application: Type <strong>yarn start</strong></li>
-  <li>Done. You can now use the application.</li>
+  <li>If you don't have serve installed, install it globaly running: <strong>yarn add -g server</strong></li>
+  <li>Run the script to start the production application: Type <strong>serve -s build</strong></li>
+  <li>Done. You can now use the application hosted on the url provided by server. Normally <strong>http://localhost:5000</strong></li>
 </ol>
